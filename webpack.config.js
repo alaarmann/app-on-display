@@ -4,13 +4,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: "./src/index.js",
   plugins: [
-       new HtmlWebpackPlugin({
-         title: 'WASM'
-       })
-     ],
+    new HtmlWebpackPlugin({
+      title: 'WASM'
+    })
+  ],
   output: {
     path: path.resolve(__dirname, "wasm"),
     filename: "bundle.js",
   },
-  mode: "development"
+  mode: "development",
+  module: {
+    rules: [{
+      test: /\.css$/,
+      use: ['css-loader']
+    }]
+  }
 };
