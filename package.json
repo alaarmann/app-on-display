@@ -17,6 +17,6 @@
     "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
-    "rust-wasm": "file:../rust-wasm"
+    "rust-wasm": "git+https://github.com/alaarmann/rust-wasm.git"
   }
 }
