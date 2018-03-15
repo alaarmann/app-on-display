@@ -11,12 +11,12 @@ h1 {
 }
 
 label {
-  width: 5em;
+  width: 9em;
   vertical-align: top;
   display: table-cell;
 }
 
-#input, #digest, #perf {
+#input, output {
   display: table-cell;
 }
 
@@ -25,7 +25,7 @@ label {
   height: 300px;
 }
 
-#digest, #perf {
+output {
   font-size: small;
   border: 1px solid;
 }
