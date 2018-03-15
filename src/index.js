@@ -23,6 +23,17 @@ const main = function(create_sha512) {
   outputSection.appendChild(digestLabel);
   outputSection.appendChild(digest);
 
+  const performanceSection = document.createElement('div');
+  performanceSection.classList.add('performance-section');
+  app.appendChild(performanceSection);
+  const perfLabel = document.createElement('label');
+  perfLabel.setAttribute('for', 'perf');
+  perfLabel.innerText = 'Duration';
+  const perf = document.createElement('output');
+  perf.id = 'perf';
+  performanceSection.appendChild(perfLabel);
+  performanceSection.appendChild(perf);
+
   const inputSection = document.createElement('div');
   inputSection.classList.add('input-section');
   app.appendChild(inputSection);
@@ -33,12 +44,18 @@ const main = function(create_sha512) {
   const inputarea = document.createElement('textarea');
   inputarea.id = 'input';
   const modifiedHandler = function() {
-    const inp = inputarea.value
+    let duration = 0;
+    const inp = inputarea.value;
     if (inp.length > 0){
-      digest.innerText = create_sha512(inp);
+      const before = performance.now();
+      const sha512sum = create_sha512(inp);
+      const after = performance.now();
+      digest.innerText = sha512sum;
+      duration = after - before;
     } else {
-      digest.innerText = '';            
+      digest.innerText = '';
     }
+    perf.innerText = duration + ' ms';
   };
   inputarea.addEventListener('keyup', modifiedHandler);
   inputarea.addEventListener('paste', modifiedHandler);

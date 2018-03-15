@@ -16,7 +16,7 @@ label {
   display: table-cell;
 }
 
-#input, #digest {
+#input, #digest, #perf {
   display: table-cell;
 }
 
@@ -25,12 +25,12 @@ label {
   height: 300px;
 }
 
-#digest {
+#digest, #perf {
   font-size: small;
   border: 1px solid;
 }
 
-.input-section, .output-section {
+.input-section, .output-section, .performance-section {
   display: table-row;
   padding-top: 15px;
 }
