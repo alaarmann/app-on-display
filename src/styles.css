@@ -1,0 +1,35 @@
+#app {
+  display: table;
+  border-spacing: 15px;
+  font-family: sans-serif;
+  width: 100px;
+}
+
+h1 {
+  display: table-caption;
+}
+
+label {
+  min-width: 5em;
+  vertical-align: top;
+  display: table-cell;
+}
+
+#input, #digest {
+  display: table-cell;
+}
+
+#input {
+  width: 500px;
+  height: 300px;
+}
+
+#digest {
+  font-size: small;
+  border: 1px solid;
+}
+
+.input-section, .output-section {
+  display: table-row;
+  padding-top: 15px;
+}
