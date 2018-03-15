@@ -38,11 +38,18 @@ const main = function(create_sha512) {
 }
 
 const createDigester = function(inputarea, id, description, digestStrategy) {
+  const descrSection = document.createElement('div');
+  descrSection.classList.add('descr-section');
+  const descrField = document.createElement('div');
+  descrField.classList.add('description');
+  descrField.innerText = description;
+  descrSection.appendChild(descrField);
+
   const outputSection = document.createElement('div');
   outputSection.classList.add('output-section');
   const digestLabel = document.createElement('label');
   digestLabel.setAttribute('for', 'digest-' + id);
-  digestLabel.innerText = 'Digest ' + description;
+  digestLabel.innerText = 'Digest';
   const digest = document.createElement('output');
   digest.id = 'digest-' + id;
   outputSection.appendChild(digestLabel);
@@ -52,7 +59,7 @@ const createDigester = function(inputarea, id, description, digestStrategy) {
   performanceSection.classList.add('performance-section');
   const perfLabel = document.createElement('label');
   perfLabel.setAttribute('for', 'perf-' + id);
-  perfLabel.innerText = 'Duration ' + description;
+  perfLabel.innerText = 'Duration';
   const perf = document.createElement('output');
   perf.id = 'perf-' + id;
   performanceSection.appendChild(perfLabel);
@@ -75,7 +82,7 @@ const createDigester = function(inputarea, id, description, digestStrategy) {
   inputarea.addEventListener('keyup', modifiedHandler);
   inputarea.addEventListener('paste', modifiedHandler);
 
-  return [outputSection, performanceSection];
+  return [descrSection, outputSection, performanceSection];
 }
 
 

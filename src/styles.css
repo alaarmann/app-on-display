@@ -10,7 +10,7 @@ h1 {
   display: table-caption;
 }
 
-label {
+label, .description {
   width: 9em;
   vertical-align: top;
   display: table-cell;
@@ -30,7 +30,7 @@ output {
   border: 1px solid;
 }
 
-.input-section, .output-section, .performance-section {
+.input-section, .output-section, .performance-section, .descr-section {
   display: table-row;
   padding-top: 15px;
 }
