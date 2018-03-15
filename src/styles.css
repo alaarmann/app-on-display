@@ -34,3 +34,7 @@ output {
   display: table-row;
   padding-top: 15px;
 }
+
+.description {
+  color: blue;
+}
