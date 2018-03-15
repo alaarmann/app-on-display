@@ -1,6 +1,6 @@
 {
   "name": "app-on-display",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A wepapp showcase",
   "main": "wasm/index.js",
   "scripts": {
