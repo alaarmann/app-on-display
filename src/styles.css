@@ -1,21 +1,22 @@
 #app {
   display: table;
+  table-layout: fixed;
   border-spacing: 15px;
   font-family: sans-serif;
-  width: 100px;
+  width: 100%;
 }
 
 h1 {
   display: table-caption;
 }
 
-label {
-  min-width: 5em;
+label, .description {
+  width: 9em;
   vertical-align: top;
   display: table-cell;
 }
 
-#input, #digest {
+#input, output {
   display: table-cell;
 }
 
@@ -24,12 +25,16 @@ label {
   height: 300px;
 }
 
-#digest {
+output {
   font-size: small;
   border: 1px solid;
 }
 
-.input-section, .output-section {
+.input-section, .output-section, .performance-section, .descr-section {
   display: table-row;
   padding-top: 15px;
+}
+
+.description {
+  color: blue;
 }
