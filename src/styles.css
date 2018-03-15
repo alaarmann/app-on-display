@@ -1,8 +1,9 @@
 #app {
   display: table;
+  table-layout: fixed;
   border-spacing: 15px;
   font-family: sans-serif;
-  width: 100px;
+  width: 100%;
 }
 
 h1 {
@@ -10,7 +11,7 @@ h1 {
 }
 
 label {
-  min-width: 5em;
+  width: 5em;
   vertical-align: top;
   display: table-cell;
 }
