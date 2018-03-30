@@ -1,6 +1,6 @@
 {
   "name": "app-on-display",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A webapp showcase",
   "main": "dist/bundle.js",
   "scripts": {
