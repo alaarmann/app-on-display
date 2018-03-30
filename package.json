@@ -2,7 +2,7 @@
   "name": "app-on-display",
   "version": "0.1.2",
   "description": "A webapp showcase",
-  "main": "wasm/index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server",
