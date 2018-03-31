@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-h1 {
+.caption {
   display: table-caption;
 }
 
@@ -36,5 +36,5 @@ output {
 }
 
 .title {
-  color: red;
+  font-weight: bold;
 }
