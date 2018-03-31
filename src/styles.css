@@ -6,11 +6,11 @@
   width: 100%;
 }
 
-h1 {
+.caption {
   display: table-caption;
 }
 
-label, .description {
+label, .title {
   width: 9em;
   vertical-align: top;
   display: table-cell;
@@ -35,6 +35,6 @@ output {
   padding-top: 15px;
 }
 
-.description {
-  color: blue;
+.title {
+  font-weight: bold;
 }
