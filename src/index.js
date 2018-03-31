@@ -10,7 +10,7 @@ const main = function(create_sha512) {
 
   const callForgeSha512 = function(message) {
     let md = forge.md.sha512.create();
-    md.update(message);
+    md.update(forge.util.createBuffer(message, 'utf8').getBytes());
     return md.digest().toHex();
   };
   const app = document.createElement('div');
